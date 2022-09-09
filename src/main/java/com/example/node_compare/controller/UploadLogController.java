@@ -2,6 +2,7 @@ package com.example.node_compare.controller;
 
 import com.example.node_compare.entity.NodeCompareEntity;
 import com.example.node_compare.repo.NodeCompareRepo;
+import com.example.node_compare.service.NodeCompareService;
 import com.example.node_compare.util.TimerUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +31,7 @@ public class UploadLogController {
     private static final Logger log = LoggerFactory.getLogger(UploadLogController.class);
 
     @Autowired
-    private NodeCompareRepo nodeCompareRepo;
+    private NodeCompareService service;
 
     @PostMapping("/uploadLog")
     public long uploadLog(@RequestParam("file") MultipartFile uploadFile, HttpServletRequest req, @RequestParam("type") int type){
@@ -51,7 +52,7 @@ public class UploadLogController {
                 memoryList.add(hash);
                 String timeStr = row.substring(6, 24);
 //                log.info("hash: {}, time: {}", hash, timeStr);
-                save(hash, type, timeStr);
+                service.save(hash, type, timeStr);
             }
             log.info("upload log finish, cost: {}", new Date().getTime() - start);
         }catch (Exception e) {
@@ -60,14 +61,6 @@ public class UploadLogController {
         return size;
     }
 
-    @Async("syncExecutorPool")
-    public void save(String hash, int type, String timeStr){
-        NodeCompareEntity entity = new NodeCompareEntity();
-        entity.setHashKey(hash);
-        entity.setLogType(type);
-        entity.setLogTime(TimerUtil.parseDate(timeStr));
-        NodeCompareEntity save = nodeCompareRepo.save(entity);
-        log.info("after save: {}", save);
-    }
+
 
 }
