@@ -1,0 +1,12 @@
+version: '0.0.1'
+services:
+  fishing-simulation:
+    container_name: node-compare
+    build:
+      context: ./node-compare
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "18099:8099"
+    entrypoint:
+      java -Dspring.profiles.active=druid -jar node_compare.jar
