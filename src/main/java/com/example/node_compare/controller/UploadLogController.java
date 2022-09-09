@@ -66,7 +66,7 @@ public class UploadLogController {
         entity.setHashKey(hash);
         entity.setLogType(type);
         entity.setLogTime(TimerUtil.parseDate(timeStr));
-        NodeCompareEntity save = nodeCompareRepo.saveAndFlush(entity);
+        NodeCompareEntity save = nodeCompareRepo.save(entity);
 //        log.info("after save: {}", save);
     }
 
