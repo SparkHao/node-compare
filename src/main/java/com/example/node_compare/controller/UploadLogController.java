@@ -75,6 +75,7 @@ public class UploadLogController {
                 }
 
             }
+            service.saveAll(list);
             log.info("upload log finish, repeatCount: {}, cost: {}", repeatCount, new Date().getTime() - start);
         }catch (Exception e) {
             log.error("{}", e);
