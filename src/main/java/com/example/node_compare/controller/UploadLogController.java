@@ -44,17 +44,38 @@ public class UploadLogController {
             String[] rows = data.split("\n");
             size = rows.length;
             log.info("type: {}, size: {}", type, size);
+            long repeatCount = 0;
+//            for(String row : rows) {
+//                String hash = row.split("=")[1];
+//                if (memoryList.contains(hash)){
+//                    repeatCount ++;
+//                    continue;
+//                }
+//                memoryList.add(hash);
+//                String timeStr = row.substring(6, 24);
+//                service.save(hash, type, timeStr);
+//            }
+            List<NodeCompareEntity> list = new ArrayList<>();
             for(String row : rows) {
                 String hash = row.split("=")[1];
                 if (memoryList.contains(hash)){
+                    repeatCount ++;
                     continue;
                 }
                 memoryList.add(hash);
                 String timeStr = row.substring(6, 24);
-//                log.info("hash: {}, time: {}", hash, timeStr);
-                service.save(hash, type, timeStr);
+                NodeCompareEntity entity = new NodeCompareEntity();
+                entity.setHashKey(hash);
+                entity.setLogType(type);
+                entity.setLogTime(TimerUtil.parseDate(timeStr));
+                list.add(entity);
+                if (list.size() == 1000) {
+                    service.saveAll(list);
+                    list = new ArrayList<>();
+                }
+
             }
-            log.info("upload log finish, cost: {}", new Date().getTime() - start);
+            log.info("upload log finish, repeatCount: {}, cost: {}", repeatCount, new Date().getTime() - start);
         }catch (Exception e) {
             log.error("{}", e);
         }

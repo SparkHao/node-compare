@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Auther: Spark
  * @CreateTime: 2022-09-09
@@ -31,5 +33,10 @@ public class NodeCompareService {
         entity.setLogTime(TimerUtil.parseDate(timeStr));
         NodeCompareEntity save = repo.save(entity);
         log.info("after save: {}", save);
+    }
+
+    @Async("syncExecutorPool")
+    public void saveAll(List<NodeCompareEntity> list){
+        repo.saveAll(list);
     }
 }
