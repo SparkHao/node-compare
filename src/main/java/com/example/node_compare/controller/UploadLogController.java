@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,6 +35,7 @@ public class UploadLogController {
     @PostMapping("/uploadLog")
     public long uploadLog(@RequestParam("file") MultipartFile uploadFile, HttpServletRequest req, @RequestParam("type") int type){
         log.info("-------------uploadLog--------------------");
+        long start = new Date().getTime();
         long size = 0;
         List<String> memoryList = new ArrayList<>();
         try {
@@ -51,6 +53,7 @@ public class UploadLogController {
 //                log.info("hash: {}, time: {}", hash, timeStr);
                 save(hash, type, timeStr);
             }
+            log.info("upload log finish, cost: {}", new Date().getTime() - start);
         }catch (Exception e) {
             log.error("{}", e);
         }

@@ -2908,3 +2908,42 @@ INFO [09-08|21:21:26.794] AddRemotes                               txs hash=0x53
 2022-09-09 12:35:32.362 [http-nio-8099-exec-2] INFO  c.e.n.c.UploadLogController - [save,67] - after save: NodeCompareEntity(id=96, hashKey=0x53ee438aed211da5a66f41f4e0a633c8fc5fe78c794e369179ec17a78687eda1, logTime=Thu Sep 08 21:21:26 CST 2022, logType=2)
 2022-09-09 12:35:51.204 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2051] - {dataSource-1} closing ...
 2022-09-09 12:35:51.207 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2124] - {dataSource-1} closed
+2022-09-09 13:29:16.015 [main] INFO  c.e.n.NodeCompareApplication - [logStarting,55] - Starting NodeCompareApplication using Java 1.8.0_342 on free with PID 25088 (/home/free/code/projects/learn-java-examples/node_compare/target/classes started by free in /home/free/code/projects/learn-java-examples/node_compare)
+2022-09-09 13:29:16.017 [main] INFO  c.e.n.NodeCompareApplication - [logStartupProfileInfo,640] - The following 1 profile is active: "druid"
+2022-09-09 13:29:16.828 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8099"]
+2022-09-09 13:29:16.829 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+2022-09-09 13:29:16.829 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-09 13:29:16.874 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+2022-09-09 13:29:16.925 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,55] - Init DruidDataSource
+2022-09-09 13:29:17.420 [main] INFO  c.a.d.p.DruidDataSource - [init,972] - {dataSource-1} inited
+2022-09-09 13:29:17.483 [main] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-09 13:29:17.505 [main] INFO  o.hibernate.Version - [logVersion,44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-09 13:29:17.577 [main] INFO  o.h.a.common.Version - [<clinit>,56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-09 13:29:17.633 [main] INFO  o.h.dialect.Dialect - [<init>,175] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-09-09 13:29:17.980 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - [initiateService,52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-09 13:29:18.557 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8099"]
+2022-09-09 13:29:18.586 [main] INFO  c.e.n.NodeCompareApplication - [logStarted,61] - Started NodeCompareApplication in 2.861 seconds (JVM running for 3.346)
+2022-09-09 13:29:24.735 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-09 13:29:24.782 [http-nio-8099-exec-1] INFO  c.e.n.c.UploadLogController - [uploadLog,36] - -------------uploadLog--------------------
+2022-09-09 13:29:24.782 [http-nio-8099-exec-1] INFO  c.e.n.c.UploadLogController - [uploadLog,43] - type: 2, size: 51
+2022-09-09 13:30:30.566 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2051] - {dataSource-1} closing ...
+2022-09-09 13:30:30.570 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2124] - {dataSource-1} closed
+2022-09-09 13:30:33.732 [main] INFO  c.e.n.NodeCompareApplication - [logStarting,55] - Starting NodeCompareApplication using Java 1.8.0_342 on free with PID 25339 (/home/free/code/projects/learn-java-examples/node_compare/target/classes started by free in /home/free/code/projects/learn-java-examples/node_compare)
+2022-09-09 13:30:33.734 [main] INFO  c.e.n.NodeCompareApplication - [logStartupProfileInfo,640] - The following 1 profile is active: "druid"
+2022-09-09 13:30:34.681 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8099"]
+2022-09-09 13:30:34.681 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+2022-09-09 13:30:34.682 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-09 13:30:34.728 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+2022-09-09 13:30:34.781 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,55] - Init DruidDataSource
+2022-09-09 13:30:35.289 [main] INFO  c.a.d.p.DruidDataSource - [init,972] - {dataSource-1} inited
+2022-09-09 13:30:35.354 [main] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-09 13:30:35.378 [main] INFO  o.hibernate.Version - [logVersion,44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-09 13:30:35.458 [main] INFO  o.h.a.common.Version - [<clinit>,56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-09 13:30:35.526 [main] INFO  o.h.dialect.Dialect - [<init>,175] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-09-09 13:30:35.848 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - [initiateService,52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-09 13:30:36.351 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8099"]
+2022-09-09 13:30:36.366 [main] INFO  c.e.n.NodeCompareApplication - [logStarted,61] - Started NodeCompareApplication in 2.986 seconds (JVM running for 3.648)
+2022-09-09 13:30:45.241 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-09 13:30:45.282 [http-nio-8099-exec-1] INFO  c.e.n.c.UploadLogController - [uploadLog,37] - -------------uploadLog--------------------
+2022-09-09 13:30:45.283 [http-nio-8099-exec-1] INFO  c.e.n.c.UploadLogController - [uploadLog,45] - type: 3, size: 51
+2022-09-09 13:30:45.465 [http-nio-8099-exec-1] INFO  c.e.n.c.UploadLogController - [uploadLog,56] - upload log finish, cost: 182
